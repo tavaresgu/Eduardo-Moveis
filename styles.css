@@ -1,10 +1,10 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('início.jpg');
     background-size: cover;
     background-position: center;
     color: #ffffff;
@@ -27,7 +27,7 @@
     background-color: #bbb486 !important;
 }
 
-ul{
+ul {
     gap: 30px;
 }
 
@@ -106,7 +106,36 @@ footer {
     margin-top: 2rem;
 }
 
-/* VERSÃO MOBILE */
+/* Estilos do Carrossel */
+#portfolioCarousel {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#portfolioCarousel .carousel-item img {
+    height: 600px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#portfolioCarousel .carousel-control-prev,
+#portfolioCarousel .carousel-control-next {
+    width: 5%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#portfolioCarousel .carousel-indicators {
+    margin-bottom: 0.5rem;
+}
+
+#portfolioCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
 
 @media (max-width: 768px) {
     .hero h1 {
@@ -117,7 +146,7 @@ footer {
         font-size: 1.2rem;
     }
 
-    .map-container{
-        display: none;
+    #portfolioCarousel .carousel-item img {
+        height: 400px;
     }
 }
