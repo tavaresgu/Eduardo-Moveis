@@ -2,6 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form handling
     const contactForm = document.getElementById('contactForm');
     
+    // Mobile menu handling
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    });
+    
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
